@@ -1,0 +1,144 @@
+:root {
+    --divider-grey: hsl(240, 5%, 91%);
+
+    --background-gradient: linear-gradient(
+        hsl(273, 75%, 66%),
+        hsl(240, 73%, 65%)
+    );
+
+    --text-grey: hsl(237, 12%, 33%);
+    --text-light-grey: hsl(240, 6%, 50%);
+    --text-dark-blue: hsl(238, 29%, 16%);
+    --text-hover-red: hsl(14, 88%, 65%);
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+    overflow: visible;
+}
+
+#faq-card-cube-svg {
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    top: 55%;
+    z-index: 2;
+}
+
+#faq-card-background-svg {    
+    position: relative;
+    bottom: 300px;
+    left: -575px;
+}
+
+#faq-card-lady-svg {    
+    position: relative;
+    bottom: 870px;
+    left: -80px;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: .75rem;
+    font-weight: 400;
+    background: var(--background-gradient);
+    color: var(--text-grey);
+}
+
+.faq-accordion-card {
+    display: flex;
+    width: 57.5rem;
+    height: 31.75rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    overflow: hidden
+}
+
+.faq-card-images {
+    flex-basis: 52%;
+}
+
+.faq-card-details {
+    flex-basis: 48%;
+    width: 350px;
+    box-sizing: content-box;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 70px 95px;
+}
+
+h1 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+}
+
+h1, .question-group.selected {
+    font-weight: 700;
+    color: var(--text-dark-blue);
+}
+
+.question-group svg {
+    pointer-events: none;
+}
+
+.question-group.selected svg {
+    rotate: 180deg;
+}
+
+.question-group.selected .answer {
+    display: block; 
+}
+
+.question-group {
+    border-bottom: solid 1px var(--divider-grey);
+}
+
+.question-group:hover {
+    color: var(--text-hover-red);
+    cursor: pointer;
+}
+.question-group.selected:hover {
+    color: initial;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 3.25rem;
+    pointer-events: none;
+}
+
+.answer {
+    display: none;
+    color: var(--text-light-grey);
+    pointer-events: none;
+}
+
+.attribution { 
+    font-size: .6875rem;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; 
+}
+
+@media (min-width: 600px) {
+}
