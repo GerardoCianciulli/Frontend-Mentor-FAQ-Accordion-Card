@@ -48,11 +48,11 @@ main {
     display: none;
 }
 
-#faq-card-mobilebackground-svg {
+#faq-card-mobile-background-svg {
     margin: 0 auto;
 }
 
-#faq-card-mobilefull-svg {
+#faq-card-mobile-full-svg {
     margin-top: -15.5rem;
     scale: 75%;
 }
